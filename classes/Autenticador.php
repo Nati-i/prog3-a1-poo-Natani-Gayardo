@@ -12,14 +12,14 @@ class Autenticador {
     }
 
     /**
-     * Registra um novo usuário na estrutura de dados simulada.
+     * guarda um novo usuário na estrutura de dados simulada.
      */
     public function registrar(Usuario $usuario): void {
         $this->usuarios[$usuario->getEmail()] = $usuario;
     }
 
     /**
-     * Realiza a tentativa de login de um usuário.
+     * faz a tentativa de login de um usuário.
      */
     public function login(string $email, string $senha): ?Usuario {
         if (isset($this->usuarios[$email]) && $this->usuarios[$email]->verificarSenha($senha)) {
